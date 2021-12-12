@@ -16,6 +16,9 @@
 	--color-grey-90: hsl(30, 1.5%, 26.3%);
 	--color-grey-100: hsl(300, 1%, 19.8%);
 	--color-black: hsl(0, 0%, 7.8%);
+	--color-viridian-300: hsl(146.7, 35.5%, 70.2%);
+	--color-viridian-500: hsl(146.5, 37.3%, 50%);
+	--color-viridian-700: hsl(146.3, 36.4%, 34.5%);
 	/* Font Sizes */
 	--fs-900: 9.375rem;
 	--fs-800: 6.25rem;
@@ -99,4 +102,83 @@ select {
 		transition-duration: 0.01ms !important;
 		scroll-behavior: auto !important;
 	}
+}
+
+/* Index Page Styles - to move to more logical places later */
+header {
+	background-color: var(--color-grey-10);
+	border-bottom: 1px solid var(--color-grey-20);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 4em;
+}
+
+h1 {
+	font-family: "IBM Plex Mono";
+	font-size: var(--fs-500);
+}
+
+h2 {
+	font-size: var(--fs-600);
+}
+
+.mg-bottom-1 {
+	margin-bottom: 1em;
+}
+
+nav li {
+	font-family: "IBM Plex Mono";
+	text-transform: uppercase;
+	display: inline-flex;
+	margin: 0em 1em;
+}
+
+section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4em 6em;
+	background-color: var(--color-grey-10);
+}
+
+.paragraph-text {
+	padding: 2em;
+}
+
+.paragraph-text span {
+	color: var(--color-viridian-500);
+	font-weight: 600;
+}
+
+.paragraph-text p {
+	font-size: var(--fs-500);
+}
+
+.flex-column {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.text-box {
+	border: 2px solid var(--color-grey-100);
+	padding: 1em;
+	margin: 1em 0em;
+	border-radius: 6px;
+	background-color: var(--color-viridian-300);
+}
+
+.mono-text {
+	font-family: "IBM Plex Mono", monospace;
+	/* text-transform: uppercase; */
+	font-weight: 300;
+}
+
+img {
+	max-width: 400px;
+	margin: 2em;
+	object-fit: cover;
+	border-radius: 2px;
+	border-bottom: 10px solid var(--color-viridian-300);
+	border-right: 10px solid var(--color-viridian-300);
 }

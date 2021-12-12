@@ -1,3 +1,4 @@
+/* Leftover from Example Project */
 import { format } from 'date-fns'
 
 export default function DateComponent({ dateString }) {

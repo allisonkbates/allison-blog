@@ -1,3 +1,4 @@
+/* Leftover from Example Project */
 import PostPreview from '../components/post-preview'
 
 export default function MoreStories({ posts }) {

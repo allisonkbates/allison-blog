@@ -1,3 +1,4 @@
+/* Leftover from Example Project */
 import Link from 'next/link'
 
 export default function Header() {

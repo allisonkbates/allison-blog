@@ -1,3 +1,4 @@
+/* Leftover from Example Project */
 import Image from 'next/image'
 
 export default function Avatar({ name, picture, jobTitle }) {

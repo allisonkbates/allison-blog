@@ -1,3 +1,4 @@
+/* Leftover from Example Project */
 import Avatar from '../components/avatar'
 import DateComponent from '../components/date'
 import CoverImage from '../components/cover-image'
