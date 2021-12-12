@@ -5,7 +5,7 @@ export default function PostsCardList({ posts, title, padding }) {
     <section style={{padding}}>
     <h2>{title ? title : "Latest Posts"}</h2>
     <div className="posts-container">
-    {posts.map(post => (
+    {posts && posts.map(post => (
       <PostCard key={post.slug} post={post}/>
     ))}
     </div>

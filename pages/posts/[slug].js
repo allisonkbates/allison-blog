@@ -12,6 +12,7 @@ export default function Post({ post, morePosts}) {
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />
   }
+  
   return (
     <PageLayout page={ `Allison Mazzetti | ${post.title}`}>
       <section className="post-section">
