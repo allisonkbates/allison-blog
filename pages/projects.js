@@ -1,12 +1,12 @@
 import Header from "../components/header";
 import Layout from "../components/layout";
 
-export default function Blog() {
+export default function Projects() {
   return (
     <>
     <Header />
     <Layout>
-      <p>This is the blog page.</p>
+      <p>Hello projects</p>
     </Layout>
     </>
   )

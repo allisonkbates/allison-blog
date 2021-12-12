@@ -1,17 +1,13 @@
-import Alert from '../components/alert'
-import Footer from '../components/footer'
-/* Leftover from Example Project */
-import Meta from '../components/meta'
+/* look into re-adding logic for showing the alert preview and meta info */
 
-export default function Layout({ preview, children }) {
+export default function Layout({children}) {
   return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <Alert preview={preview} />
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
+    <div>
+      {children}
+    <style jsx>{`
+      margin: 2em 4em;
+    `}
+    </style>
+    </div>
   )
 }

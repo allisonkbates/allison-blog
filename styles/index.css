@@ -104,34 +104,9 @@ select {
 	}
 }
 
-/* Index Page Styles - to move to more logical places later */
-header {
-	background-color: var(--color-grey-10);
-	border-bottom: 1px solid var(--color-grey-20);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1em 4em;
-}
-
-h1 {
-	font-family: "IBM Plex Mono";
-	font-size: var(--fs-500);
-}
-
-h2 {
-	font-size: var(--fs-600);
-}
-
+/* Random Styles to Incorporate into Components */
 .mg-bottom-1 {
 	margin-bottom: 1em;
-}
-
-nav li {
-	font-family: "IBM Plex Mono";
-	text-transform: uppercase;
-	display: inline-flex;
-	margin: 0em 1em;
 }
 
 section {

@@ -1,16 +1,12 @@
+import Header from "../components/header";
+import Layout from "../components/layout";
+import Footer from "../components/footer";
+
 export default function Index() {
   return (
     <div>
-    <header>
-      <h2 className="mono-text">Allison Mazzetti</h2>
-      <nav>
-        <ul>
-          <li>Blog</li>
-          <li>Projects</li>
-          <li>About</li>
-        </ul>
-      </nav>
-    </header>
+    <Header />
+    <Layout>
     <section>
       <div className="paragraph-text">
         <h2 className="mg-bottom-1">👋 Hi, I'm Allison.</h2>
@@ -36,6 +32,8 @@ export default function Index() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
     </section>
+    </Layout>
+    <Footer></Footer>
     </div>
   )
 }
