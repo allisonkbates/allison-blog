@@ -12,9 +12,9 @@ export default function Post({ post, morePosts}) {
   if (!router.isFallback && !post) {
     return <ErrorPage statusCode={404} />
   }
-  
+
   return (
-    <PageLayout page={ `Allison Mazzetti | ${post.title}`}>
+    <PageLayout page={ post ? `Allison Mazzetti | ${post.title}`: `Allison Mazzetti`}>
       <section className="post-section">
         <h2 className="post-title">{post.title}</h2>
         <p className="post-date"><DateComponent dateString={post.date}/></p>

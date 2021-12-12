@@ -7,7 +7,10 @@ export default function Index({ allPosts }) {
   return (
     <PageLayout page="Home"> 
       <Intro />
+      {allPosts && (
       <PostCardList posts={allPosts} padding="2em"/>
+      )}
+      
     <style jsx>{`
       h2 {
         font-family: "IBM Plex Mono", monospace;
