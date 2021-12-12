@@ -13,10 +13,9 @@ export default function Post({ post, morePosts}) {
     return <ErrorPage statusCode={404} />
   }
 
-
   return (
     
-    <PageLayout page={ `Allison Mazzetti`}>
+    <PageLayout page={!post ? `Test` : `${post.title}`}>
       {router.isFallback ? (<h1>Loading…</h1>) : (
       <section className="post-section">
         <h2 className="post-title">{post.title}</h2>
