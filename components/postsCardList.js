@@ -1,7 +1,6 @@
 import PostCard from "../components/postCard";
 
 export default function PostsCardList({ posts, title, padding }) {
-  console.log(posts);
   return (
     <section style={{padding}}>
     <h2>{title ? title : "Latest Posts"}</h2>

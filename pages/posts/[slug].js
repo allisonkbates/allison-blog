@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router'
+import ErrorPage from 'next/error'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import PageLayout from "../../components/pageLayout";
 import PostsCardList from "../../components/postsCardList";
@@ -5,7 +7,11 @@ import DateComponent from "../../components/date";
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 
 export default function Post({ post, morePosts}) {
-  console.log(post, morePosts);
+  const router = useRouter()
+
+  if (!router.isFallback && !post) {
+    return <ErrorPage statusCode={404} />
+  }
   return (
     <PageLayout page={ `Allison Mazzetti | ${post.title}`}>
       <section className="post-section">
