@@ -16,7 +16,7 @@ export default function Post({ post, morePosts}) {
 
   return (
     
-    <PageLayout page={ post.title ? `Allison Mazzetti | ${post.title}`: `Allison Mazzetti`}>
+    <PageLayout page={ `Allison Mazzetti`}>
       {router.isFallback ? (<h1>Loading…</h1>) : (
       <section className="post-section">
         <h2 className="post-title">{post.title}</h2>
