@@ -9,7 +9,7 @@ export default function Blog({ allPosts }) {
       <Head>
         <title>Allison Mazzetti | Blog</title>
       </Head>
-      <PostsCardList posts={allPosts}/>
+      {allPosts && <PostsCardList posts={allPosts}/>}
     <style jsx>{`
     `}</style>
     </PageLayout>

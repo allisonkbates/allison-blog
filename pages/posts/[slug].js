@@ -13,8 +13,10 @@ export default function Post({ post, morePosts}) {
     return <ErrorPage statusCode={404} />
   }
 
+
   return (
-    <PageLayout page={ post ? `Allison Mazzetti | ${post.title}`: `Allison Mazzetti`}>
+    <PageLayout page={ post.title ? `Allison Mazzetti | ${post.title}`: `Allison Mazzetti`}>
+      {post && 
       <section className="post-section">
         <h2 className="post-title">{post.title}</h2>
         <p className="post-date"><DateComponent dateString={post.date}/></p>
@@ -23,10 +25,10 @@ export default function Post({ post, morePosts}) {
           {documentToReactComponents(post.content.json)}
         </div>
         <hr></hr>
-      </section>
+      </section>}
       
       <section>
-        <PostsCardList posts={morePosts} title="More Posts"/>
+        {morePosts && <PostsCardList posts={morePosts} title="More Posts"/>}
       </section>
     <style jsx>{`
       section {
@@ -73,13 +75,13 @@ export async function getStaticProps({ params, preview = false }) {
   }
 }
 
-export async function getStaticPaths() {
-  const allPosts = await getAllPostsWithSlug()
-  return {
-    paths: allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [],
-    fallback: true,
-  }
-}
+// export async function getStaticPaths() {
+//   const allPosts = await getAllPostsWithSlug()
+//   return {
+//     paths: allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [],
+//     fallback: true,
+//   }
+// }
 
 
 // import { useRouter } from 'next/router'
