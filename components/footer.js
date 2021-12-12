@@ -6,6 +6,7 @@ export default function Footer() {
         background-color: var(--color-viridian-300);
         height: 50px;
         width: 100%;
+        flex-shrink: 0;
       }
     `}</style>
     </footer>

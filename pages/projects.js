@@ -1,13 +1,9 @@
-import Header from "../components/header";
-import Layout from "../components/layout";
+import PageLayout from "../components/pageLayout";
 
 export default function Projects() {
   return (
-    <>
-    <Header />
-    <Layout>
+    <PageLayout page="Projects">
       <p>Hello projects</p>
-    </Layout>
-    </>
+    </PageLayout>
   )
 }

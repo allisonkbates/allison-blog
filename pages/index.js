@@ -1,17 +1,10 @@
 import Head from "next/head";
 import { getAllPostsForHome } from '../lib/api'
-import Header from "../components/header";
-import Layout from "../components/layout";
-import Posts from "../components/posts";
+import PageLayout from "../components/pageLayout";
 
 export default function Index({ allPosts }) {
   return (
-    <>
-    <Header />
-    <Layout>
-      <Head>
-        <title>Allison Mazzetti | Blog</title>
-      </Head>
+    <PageLayout page="Home"> 
       <h2>This is this home page... TBD what to include!</h2>
       {/* <Posts posts={allPosts}/> */}
     <style jsx>{`
@@ -20,8 +13,8 @@ export default function Index({ allPosts }) {
         font-weight: 300;
       }
     `}</style>
-    </Layout>
-    </>
+    </PageLayout>
+
   )
 }
 

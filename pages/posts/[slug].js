@@ -1,19 +1,9 @@
-import Head from "next/head";
-import Header from "../../components/header";
-import Layout from "../../components/layout";
-import Footer from "../../components/footer";
+import PageLayout from "../../components/pageLayout";
 
 export default function Post() {
   return (
-    <>
-      <Header />
-      <Layout>
-        <Head>
-          <title>Allison Mazzetti | Post Name</title>
-        </Head>
-      </Layout>
-      <Footer />
-    </>
+    <PageLayout page="Post Page Placeholder">
+    </PageLayout>
   )
 }
 

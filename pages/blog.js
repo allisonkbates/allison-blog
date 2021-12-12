@@ -1,24 +1,18 @@
 import Head from "next/head";
 import { getAllPostsForHome } from '../lib/api'
-import Header from "../components/header";
-import Layout from "../components/layout";
-import Footer from "../components/footer";
 import Posts from "../components/posts";
+import PageLayout from "../components/pageLayout";
 
 export default function Blog({ allPosts }) {
   return (
-    <>
-    <Header />
-    <Layout>
+    <PageLayout page="Blog">
       <Head>
         <title>Allison Mazzetti | Blog</title>
       </Head>
       <Posts posts={allPosts}/>
     <style jsx>{`
     `}</style>
-    </Layout>
-    <Footer />
-    </>
+    </PageLayout>
   )
 }
 

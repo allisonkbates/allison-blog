@@ -1,4 +1,4 @@
-import Post from "./postCard";
+import PostCard from '../components/postCard';
 
 export default function Posts({ posts }) {
   console.log(posts);
@@ -7,7 +7,7 @@ export default function Posts({ posts }) {
     <h2>Latest Posts</h2>
     <div className="posts-container">
     {posts.map(post => (
-      <Post key={post.slug} post={post}/>
+      <PostCard key={post.slug} post={post}/>
     ))}
     </div>
     <style jsx>{`

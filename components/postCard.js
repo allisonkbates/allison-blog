@@ -3,7 +3,6 @@ import DateComponent from "./date";
 
 export default function PostCard({post}) {
   return (
-    
     <div className="post-container">
       <p className="post-date"><DateComponent dateString={post.date}/></p>
       <hr></hr>
@@ -41,7 +40,6 @@ export default function PostCard({post}) {
       }
 
     `}</style>
-    
     </div>
   )
 }
