@@ -2,6 +2,7 @@ import Head from "next/head";
 import { getAllPostsForHome } from '../lib/api'
 import Header from "../components/header";
 import Layout from "../components/layout";
+import Footer from "../components/footer";
 import Posts from "../components/posts";
 
 export default function Blog({ allPosts }) {
@@ -12,15 +13,11 @@ export default function Blog({ allPosts }) {
       <Head>
         <title>Allison Mazzetti | Blog</title>
       </Head>
-      <h2>Latest Posts</h2>
       <Posts posts={allPosts}/>
     <style jsx>{`
-      h2 {
-        font-family: "IBM Plex Mono", monospace;
-        font-weight: 300;
-      }
     `}</style>
     </Layout>
+    <Footer />
     </>
   )
 }
