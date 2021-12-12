@@ -15,8 +15,9 @@ export default function Post({ post, morePosts}) {
 
   return (
     
-    <PageLayout page={!post ? `Test` : `${post.title}`}>
+    <PageLayout page={!post ? `Recent Post` : `${post.title}`}>
       {router.isFallback ? (<h1>Loading…</h1>) : (
+      <div>
       <section className="post-section">
         <h2 className="post-title">{post.title}</h2>
         <p className="post-date"><DateComponent dateString={post.date}/></p>
@@ -25,8 +26,10 @@ export default function Post({ post, morePosts}) {
           {documentToReactComponents(post.content.json)}
         </div>
         <hr></hr>
-        {morePosts && <PostsCardList posts={morePosts} title="More Posts"/>}
-      </section>)}
+        </section>
+        {morePosts && <PostsCardList posts={morePosts} title="More Posts" padding="2em"/>}
+        </div>
+      )}
     <style jsx>{`
       section {
         padding: 2em;
