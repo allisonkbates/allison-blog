@@ -1,29 +1,44 @@
-/* Leftover from Example Project */
-import { CMS_NAME, CMS_URL } from '../lib/constants'
+import Link from "next/link";
 
 export default function Intro() {
   return (
-    <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Blog.
-      </h1>
-      <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        A statically generated blog example using{' '}
-        <a
-          href="https://nextjs.org/"
-          className="underline hover:text-success duration-200 transition-colors"
-        >
-          Next.js
-        </a>{' '}
-        and{' '}
-        <a
-          href={CMS_URL}
-          className="underline hover:text-success duration-200 transition-colors"
-        >
-          {CMS_NAME}
-        </a>
-        .
-      </h4>
+    <section>
+      <div className="paragraph-text">
+        <h2 className="mg-bottom-1">👋 Hi, I'm Allison.</h2>
+        <p className="mg-bottom-1">I'm a currently a <span>senior product manager</span> at theSkimm. I love <span>teaching others</span> about product management, whether they're a designer, engineer or someone I just met on the train.</p>
+        <p>You can find my latest thoughts on <Link href="/blog"><a>my blog.</a></Link></p>
+      </div>
+      <div>
+        <img src="/profile-pic.png"></img>
+      </div>
+    <style jsx>{`
+      section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      div {
+        padding: 2em;
+      }
+      h2 {
+        font-size: var(--fs-600);
+        margin-bottom: 1em;
+      }
+      p {
+        font-size: var(--fs-500);
+        margin-bottom: 1em;
+      }
+      span, a {
+        color: var(--color-viridian-500);
+        font-weight: 600;
+      }
+      img {
+        max-width: 350px;
+        border-radius: 2px;
+        border-bottom: 10px solid var(--color-viridian-300);
+        border-right: 10px solid var(--color-viridian-300);
+      }
+    `}</style>
     </section>
   )
 }
