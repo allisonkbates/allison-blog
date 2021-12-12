@@ -15,8 +15,9 @@ export default function Post({ post, morePosts}) {
 
 
   return (
+    
     <PageLayout page={ post.title ? `Allison Mazzetti | ${post.title}`: `Allison Mazzetti`}>
-      {post && 
+      {router.isFallback ? (<h1>Loading…</h1>) : (
       <section className="post-section">
         <h2 className="post-title">{post.title}</h2>
         <p className="post-date"><DateComponent dateString={post.date}/></p>
@@ -25,11 +26,8 @@ export default function Post({ post, morePosts}) {
           {documentToReactComponents(post.content.json)}
         </div>
         <hr></hr>
-      </section>}
-      
-      <section>
         {morePosts && <PostsCardList posts={morePosts} title="More Posts"/>}
-      </section>
+      </section>)}
     <style jsx>{`
       section {
         padding: 2em;
@@ -75,13 +73,13 @@ export async function getStaticProps({ params, preview = false }) {
   }
 }
 
-// export async function getStaticPaths() {
-//   const allPosts = await getAllPostsWithSlug()
-//   return {
-//     paths: allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [],
-//     fallback: true,
-//   }
-// }
+export async function getStaticPaths() {
+  const allPosts = await getAllPostsWithSlug()
+  return {
+    paths: allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [],
+    fallback: true,
+  }
+}
 
 
 // import { useRouter } from 'next/router'
