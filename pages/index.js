@@ -1,12 +1,13 @@
-import Head from "next/head";
-import { getAllPostsForHome } from '../lib/api'
+import { getAllPostsForHome } from '../lib/api';
+import Intro from "../components/intro";
 import PageLayout from "../components/pageLayout";
+import PostCardList from "../components/postsCardList";
 
 export default function Index({ allPosts }) {
   return (
     <PageLayout page="Home"> 
-      <h2>This is this home page... TBD what to include!</h2>
-      {/* <Posts posts={allPosts}/> */}
+      <Intro />
+      <PostCardList posts={allPosts} padding="2em"/>
     <style jsx>{`
       h2 {
         font-family: "IBM Plex Mono", monospace;

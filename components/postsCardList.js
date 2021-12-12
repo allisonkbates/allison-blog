@@ -1,10 +1,10 @@
-import PostCard from '../components/postCard';
+import PostCard from "../components/postCard";
 
-export default function Posts({ posts }) {
+export default function PostsCardList({ posts, title, padding }) {
   console.log(posts);
   return (
-    <>
-    <h2>Latest Posts</h2>
+    <section style={{padding}}>
+    <h2>{title ? title : "Latest Posts"}</h2>
     <div className="posts-container">
     {posts.map(post => (
       <PostCard key={post.slug} post={post}/>
@@ -20,11 +20,10 @@ export default function Posts({ posts }) {
         display: grid;
         grid-gap: 24px;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr auto;
         grid-auto-flow: row;
       }
-    `}</style>
-    
-    </>
+    `}</style>   
+    </section>
   )
 }

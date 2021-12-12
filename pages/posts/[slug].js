@@ -1,11 +1,79 @@
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import PageLayout from "../../components/pageLayout";
+import PostsCardList from "../../components/postsCardList";
+import DateComponent from "../../components/date";
+import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 
-export default function Post() {
+export default function Post({ post, morePosts}) {
+  console.log(post, morePosts);
   return (
-    <PageLayout page="Post Page Placeholder">
+    <PageLayout page={ `Allison Mazzetti | ${post.title}`}>
+      <section className="post-section">
+        <h2 className="post-title">{post.title}</h2>
+        <p className="post-date"><DateComponent dateString={post.date}/></p>
+        <hr></hr>
+        <div className="post-content">
+          {documentToReactComponents(post.content.json)}
+        </div>
+        <hr></hr>
+      </section>
+      
+      <section>
+        <PostsCardList posts={morePosts} title="More Posts"/>
+      </section>
+    <style jsx>{`
+      section {
+        padding: 2em;
+        width: 100%;
+      }
+      .post-section {
+        width: 75%;
+      }
+      .post-title {
+        font-family: var(--ff-mono);
+        color: var(--color-viridian-500);
+        font-weight: 500;
+        font-size: var(--fs-700);
+        line-height: 1;
+        margin-bottom: 1em;
+      }
+      hr {
+        border: 1px solid var(--color-grey-30);
+      }
+      .post-date {
+        font-family: var(--ff-mono);
+        color: var(--color-grey-50);
+        font-size: var(--fs-300);
+      }
+      .post-content {
+        margin-bottom: 2em;
+      }
+    `}</style>
     </PageLayout>
   )
 }
+
+/* Note! This query is set to only return two results */
+export async function getStaticProps({ params, preview = false }) {
+  const data = await getPostAndMorePosts(params.slug, preview)
+
+  return {
+    props: {
+      preview,
+      post: data?.post ?? null,
+      morePosts: data?.morePosts ?? null,
+    },
+  }
+}
+
+export async function getStaticPaths() {
+  const allPosts = await getAllPostsWithSlug()
+  return {
+    paths: allPosts?.map(({ slug }) => `/posts/${slug}`) ?? [],
+    fallback: true,
+  }
+}
+
 
 // import { useRouter } from 'next/router'
 // import Head from 'next/head'

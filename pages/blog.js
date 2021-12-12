@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { getAllPostsForHome } from '../lib/api'
-import Posts from "../components/posts";
+import PostsCardList from "../components/postsCardList";
 import PageLayout from "../components/pageLayout";
 
 export default function Blog({ allPosts }) {
@@ -9,7 +9,7 @@ export default function Blog({ allPosts }) {
       <Head>
         <title>Allison Mazzetti | Blog</title>
       </Head>
-      <Posts posts={allPosts}/>
+      <PostsCardList posts={allPosts}/>
     <style jsx>{`
     `}</style>
     </PageLayout>
