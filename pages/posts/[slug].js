@@ -27,7 +27,7 @@ export default function Post({ post, morePosts}) {
         </div>
         <hr></hr>
         </section>
-        {morePosts && <PostsCardList posts={morePosts} title="More Posts" padding="2em"/>}
+        {morePosts && <PostsCardList posts={morePosts} title="More Posts" className="padding-2em"/>}
         </div>
       )}
     <style jsx>{`
@@ -56,6 +56,13 @@ export default function Post({ post, morePosts}) {
       }
       .post-content {
         margin-bottom: 2em;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .post-section {
+          width: 100%;
+          padding: 1em;
+        }
       }
     `}</style>
     </PageLayout>
