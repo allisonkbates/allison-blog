@@ -26,10 +26,14 @@ export default function Header() {
           font-weight: 300;
           text-decoration: none;
           color: var(--color-grey-100);
+          text-align: center;
+        }
+        ul {
+          padding: 0;
         }
         li {
-          display: inline-flex;
           margin: 0em 1em;
+          display: inline-flex;
         }
         li a {
           font-family: "IBM Plex Mono", monospace;
@@ -38,7 +42,18 @@ export default function Header() {
           text-decoration: none;
           color: var(--color-grey-100);
         }
-
+        @media only screen and (max-width: 768px) {
+          header {
+            flex-direction: column;
+            padding: 1em;
+          }
+          h2 a {
+            font-size: var(--fs-500);
+          }
+          li a {
+            font-size: var(--fs-300);
+          }
+        }
       `}</style>
     </header>
     
