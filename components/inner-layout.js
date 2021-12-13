@@ -4,7 +4,7 @@ export default function InnerLayout({children}) {
       {children}
     <style jsx>{`
       div {
-        margin: 2em 4em;
+        margin: 2em 6em;
         flex: 1 0 auto;
       }
       @media only screen and (max-width: 768px) {

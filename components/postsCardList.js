@@ -1,8 +1,8 @@
 import PostCard from "../components/postCard";
 
-export default function PostsCardList({ posts, title, className }) {
+export default function PostsCardList({ posts, title}) {
   return (
-    <section className={{className}}>
+    <section>
     <h2>{title ? title : "Latest Posts"}</h2>
     <div className="posts-container">
     {posts && posts.map(post => (
@@ -22,16 +22,9 @@ export default function PostsCardList({ posts, title, className }) {
         grid-template-rows: 1fr auto;
         grid-auto-flow: row;
       }
-      .padding-2em {
-        padding: 2em;
-      }
-
       @media only screen and (max-width: 768px) {
         .posts-container {
           grid-template-columns: 1fr;
-        }
-        .padding-2em {
-          padding: 1em;
         }
       }
     `}</style>   

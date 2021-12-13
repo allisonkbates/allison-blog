@@ -16,9 +16,7 @@ export default function Intro() {
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-      div {
-        padding: 2em;
+        margin: 1em 0em;
       }
       h2 {
         font-size: var(--fs-600);
@@ -42,14 +40,12 @@ export default function Intro() {
         section {
           flex-direction: column-reverse;
         }
-        div {
-          padding: 1em;
-        }
         .paragraph-text {
           text-align: center;
         }
         img {
           max-width: 250px;
+          margin-bottom: 2em;
         }
         h2 {
           font-size: var(--fs-500);

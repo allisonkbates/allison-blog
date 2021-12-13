@@ -32,7 +32,6 @@ export default function Post({ post, morePosts}) {
       )}
     <style jsx>{`
       section {
-        padding: 2em;
         width: 100%;
       }
       .post-section {
@@ -61,7 +60,6 @@ export default function Post({ post, morePosts}) {
       @media only screen and (max-width: 768px) {
         .post-section {
           width: 100%;
-          padding: 1em;
         }
         .post-title {
           font-size: var(--fs-500);

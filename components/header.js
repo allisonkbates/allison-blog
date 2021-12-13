@@ -18,7 +18,7 @@ export default function Header() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1em 4em;
+          padding: 1em 6em;
         }
         h2 a {
           font-family: "IBM Plex Mono", monospace;
@@ -45,7 +45,7 @@ export default function Header() {
         @media only screen and (max-width: 768px) {
           header {
             flex-direction: column;
-            padding: 1em;
+            padding: 1em 2em;
           }
           h2 a {
             font-size: var(--fs-500);
