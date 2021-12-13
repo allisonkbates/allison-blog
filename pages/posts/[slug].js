@@ -63,6 +63,13 @@ export default function Post({ post, morePosts}) {
           width: 100%;
           padding: 1em;
         }
+        .post-title {
+          font-size: var(--fs-500);
+        }
+        .post-content {
+          font-size: var(--fs-300);
+        }
+
       }
     `}</style>
     </PageLayout>

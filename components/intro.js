@@ -51,6 +51,12 @@ export default function Intro() {
         img {
           max-width: 250px;
         }
+        h2 {
+          font-size: var(--fs-500);
+        }
+        p {
+          font-size: var(--fs-400);
+        }
       }
     `}</style>
     </section>
