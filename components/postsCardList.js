@@ -22,6 +22,11 @@ export default function PostsCardList({ posts, title, padding }) {
         grid-template-rows: 1fr auto;
         grid-auto-flow: row;
       }
+      @media only screen and (max-width: 768px) {
+        .posts-container {
+          grid-template-columns: 1fr;
+        } 
+      }
     `}</style>   
     </section>
   )

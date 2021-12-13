@@ -38,6 +38,20 @@ export default function Intro() {
         border-bottom: 10px solid var(--color-viridian-300);
         border-right: 10px solid var(--color-viridian-300);
       }
+      @media only screen and (max-width: 768px) {
+        section {
+          flex-direction: column-reverse;
+        }
+        div {
+          padding: 1em;
+        }
+        .paragraph-text {
+          text-align: center;
+        }
+        img {
+          max-width: 250px;
+        }
+      }
     `}</style>
     </section>
   )
