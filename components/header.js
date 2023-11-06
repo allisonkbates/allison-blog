@@ -6,7 +6,7 @@ export default function Header() {
       <h2><Link href="/"><a>Allison Mazzetti</a></Link></h2>
       <nav>
         <ul>
-          <li><Link href="/blog"><a>Blog</a></Link></li>
+          <li><Link href="/blog"><a>Food Blog</a></Link></li>
           <li><Link href="/projects"><a>Projects</a></Link></li>
           <li><Link href="/about"><a>About</a></Link></li>
         </ul>
@@ -56,6 +56,6 @@ export default function Header() {
         }
       `}</style>
     </header>
-    
+
   )
 }
